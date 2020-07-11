@@ -1,0 +1,16 @@
+import math
+for _ in range(int(input())):
+    n,m,k=map(int,input().split(" "))
+    if m==0:
+        print(0)
+    elif n/k>=m:
+        print(m)
+    elif n/k<m:
+        x=math.ceil((m-(n/k))/(k-1))
+        y=n/k
+        print(int(y-x))                                                 
+                              
+                              
+                              
+                              
+        

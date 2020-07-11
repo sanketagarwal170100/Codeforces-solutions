@@ -1,0 +1,16 @@
+for _ in range(int(input())):
+    n,k=map(int,input().split(" "))
+    res=0
+    if n%2==0:
+        res=n+(2*k)
+        print(res)
+    else:
+        check=3
+        while True:
+            if n%check==0:
+                break
+            else:
+                check+=2
+        res=n+check+((k-1)*2)
+        print(res)
+            

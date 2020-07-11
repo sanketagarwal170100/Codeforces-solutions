@@ -1,0 +1,27 @@
+for _ in range(int(input())):
+    n,m,x,y=map(int,input().split(" "))
+    single=0
+    double=0
+    for i in range(n):
+        s=input()
+        l=[]
+        check=0
+        for i in range (len(s)):
+            if s[i]=='.' and check==1:
+                single+=1
+                double+=1
+                check=0
+            elif s[i]=='.' and check==0:
+                single+=1
+                check=1        
+            else:
+                continue
+    a=single*x
+    b=double*y+(single-(double*2))*x
+    if a>b:
+        print(b)
+    else:
+        print(a)
+        
+                    
+            
